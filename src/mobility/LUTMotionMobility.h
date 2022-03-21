@@ -18,7 +18,7 @@
 
 #include <omnetpp.h>
 
-#include <inet/mobility/static/StationaryMobility.h>    // inet
+#include "inet/mobility/static/StationaryMobility.h"    // inet
 
 using namespace inet;
 //-----------------------------------------------------
@@ -35,7 +35,7 @@ public:
     // returns latitude
     double getLUTPositionY() const;
 
-    virtual Coord getCurrentPosition() override;
+    virtual Coord& getCurrentPosition() override;
 
 protected:
     virtual void initialize(int) override;
